@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Love</title>
+    <link rel="stylesheet" href="new.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>For You 💖</h1>
+      <div class="postcard1"></div>
+      <div class="postcard">
+        <div class="letter"></div>
+        <p>
+          <span>My Love, <br> <br/> </span>
+          <br />
+          Hi Nicole, Speechless ako sa sinabi mo hindi ko magawang mag chat sayo, alam mo
+          ba na ang saya ng gising ko kasi naayos na ulit body clock ko, pero pag open ko ng
+          message mo ayun pala mababasa ko na akala ko pa naman lsm na yun pala mag papaalam 
+          ka na, kaya eto dinaan ko na lang dito haha, hindi totoo yung iniisip mo na hindi
+          talaga kita gusto, ang totoo nyan gusto talaga kita gustong gusto, actually na 
+          aattach na ako sayo hindi mo ba napansin nung mag kausap tayo nung nag kwekwento ako
+          sayo, ganun na ako ka komportable sayo, tyaka sabi ko sayo ipakilala na kita kila 
+          Mama para maniwala ka na seryoso ako, na gusto talaga kita at para mawala doubt mo 
+          sakin. At yung kay Alysa naman, wala naman talaga akong gusto don, at totoo yung message
+          nya about lang yun sa pag iinvite sa hamster kombat yun lang yon. Kaya hindi rin kita masisi
+          kung bakit nagseselos ka, kung bakit nag ooverthink ka at kung bakit gusto mo ng itigil to,
+          sorry mali ko talaga, I'm sorry Nicole sa mga maling nagawa ko at pagkukulang ko, at yung sinabi mo?
+          ansakit lang isipin na ganun na pala iniisip mo sakin sorry talaga at kung yan na talaga desisyon
+          mo I rerespeto ko ayaw ko rin na nagkakaganyan ka ng dahil saakin, sorry and Thank you for 
+          Everthing, you too have a great life! Take Care always! I Love you so Much❤
+          
+          <br /> <br> <br/>
+          <span class="ullu">
+            Your Programmer,
+            <br />
+            Lei
+          </span>
+        </p>
+        <div class="address"></div>
+      </div>
+    </div>
+    
+    <audio id="background-music" src="umaasa.mp3"></audio>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (sessionStorage.getItem('playMusic') === 'true') {
+          var audio = document.getElementById('background-music');
+          audio.play().catch(function(error) {
+            console.error('Audio play failed:', error);
+          });
+          sessionStorage.removeItem('playMusic'); // Clear the flag after playing the music
+        }
+      });
+
+      window.addEventListener('beforeunload', function() {
+        var audio = document.getElementById('background-music');
+        if (!audio.paused) {
+          sessionStorage.setItem('playMusic', 'true');
+        }
+      });
+
+      var audio = document.getElementById('background-music');
+      audio.play().catch(function(error) {
+        console.error('Audio play failed:', error);
+      });
+    </script>
+  </body>
+</html>
